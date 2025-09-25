@@ -1,0 +1,4 @@
+#+TITLE: Capture
+#+LATEX_HEADER: \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) WAITING(w) FEEDBACK(b) NEXT(n) IDEA(i) | ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+OPTIONS: ^:nil todo:nil tags:nil f:t toc:t

@@ -1,0 +1,67 @@
+#+TITLE: README
+#+DESCRIPTION: Daily life and College notes keeping and documentation using orgmode and markdown 
+* Repo hierarchy
+Different implementations copied from real world systems and to utilize [[https://github.com/nvim-orgmode/orgmode/blob/master/DOCS.md][nvim-orgmode]] and [[https://www.orgzlyrevived.com/docs][orglzy-android]] along with some simple markdowns for seamless integration workflow
+** Structure hierarchy
+In general, each level should be correlate to specification of a topic
+
+- Each level contains a ~%s_main~ file to be the main workspace of the corresponded topic (e.g. ~git/git_main.org~) 
+- An ~archive~ dir that contains an archive ~%s_archive~ of the ~%s_main~ file (e.g. ~git/git_main.org_archive~)
+- An ~assets~ dir to contain assets of the documents
+- The rests should be documents oof the corresponded topic
+
+/The outermost level is the main-level which is used for documentation of this repo and its development/
+** STATES and TAGS
+~STATE~ and ~TAG~ are written to utilize ~search~ function in nvim-orgmode and orgzly-android
+*** STATES
+~STATES~ are written to track the current progress of a note/document across the repo. There are (currently):
+
+- *Unfinished ~STATE~:* Allocate task for present/future work
+   - ~TODO~ allocate a prioritized task and to finish in a short time in the future
+   - ~PENDING~ lower prioritized task to finish after ~TODOs~
+   - ~GOING~ on going tasks
+
+- *Finished ~STATE~:* Finished/Archived tasks
+  - ~DONE~ finished tasks
+  - ~ARCHIVED~ archived tasks
+*** TAGS
+CLOSED: [2024-10-01 Tue 20:05]
+~TAGS~ are written to group related/unrelated notes from across the repo. Thus, each individual ~topic~ will get a ~TAG~ and there are ~TAGS~ implemented from different task-management systems for better grouping (e.g. ~* Git related headline :GIT::ONEOFF~)
+
+#+BEGIN_QUOTE:
+[!NOTE]
+Due to limitation of ~orglzy-android~ ~orgmode-drawer~ isn't completely implemented yet. And thus, this repo uses TAG as a workaround
+#+END_QUOTE:
+
+Tag anatomy: ~HEADLINE :Inheritance:Unique:Catergory-type:Task-type~
+This tag system is implemented to work with orgzly ~lazy search~ function
+
+Document on special orgmode ~properties~ [[https://orgmode.org/manual/Special-Properties.html][orgmanual]]
+**** Category Types
+~Category TAG~ is implemented to replace orgmode special property ~CATERGORY~, there are a few ~CATERGORY~ tags:
+***** Archived category :ARCHIVE:
+Special types used to for archived documents for future reference
+***** Article category :ARTICLE:
+Publication describes existing research or comment on current trends in a specific topic 
+***** Document category :DOC:
+Communicable material to describe, explain or instruct attributes of a project, system or procedure
+***** List category :LIST:
+Collection of data, items in ordered manner or recorded, added transactions
+***** Log category :LOG:
+Detailed list of information or output of commands to keep track of running tasks/services
+**** Task types
+Reference: [[file:academic/time_management.org::#task_types]]
+
+/Further implementation will be using/ [[https://github.com/nvim-orgmode/orgmode/blob/master/DOCS.md#org_capture_templates][org_capture_template]]
+***** Incidental Tasks :INCIDENTAL:
+These are small, unexpected items unrelated to your main responsibilities. Take care of these generally easy-to-handle tasks as they arise and before they slip your mind
+***** Coordinated Tasks :COORDINATED:
+These require input or action from other people. Keep an eye on the completion of another's. Keep an eye on coordinated tasks to ensure you're available when team members need you, and that you notice when it's your turn
+***** One-Off Tasks :ONEOFF:
+This is the most common task type - role-specific planned to-dos and don't recur. Use a daily or weekly calendar to note one-off tasks and block time to complete them 
+***** Recurring Tasks :RECURRING:
+Recurring tasks happen regularly. Automate these items in your preferred calendar, adding notifications if necessary
+***** Urgent Tasks :URGENT:
+Urgent tasks are unexpected and require immediate attention. Handle these as soon as possible to prevent them from snowballing into larger issues
+***** Performance Tasks :PERFORMANCE:
+Performance tasks are what managers use to test capabilities.
