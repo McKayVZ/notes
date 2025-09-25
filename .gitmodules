@@ -1,3 +1,12 @@
 [submodule "language"]
 	path = language
 	url = git@github.com:McKayVZ/language
+[submodule "modules/teaching"]
+	path = modules/teaching
+	url = git@github.com:McKayVZ/teaching
+[submodule "modules/languages"]
+	path = modules/languages
+	url = git@github.com:McKayVZ/language
+[submodule "modules/academic"]
+	path = modules/academic
+	url = git@github.com:McKayVZ/academic
