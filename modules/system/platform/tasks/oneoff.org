@@ -1,0 +1,109 @@
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+LATEX_HEADER: \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+OPTIONS: todo:t tags:nil tasks:t ^:nil toc:nil
+#+TITLE: Platform Oneoff Tasks
+
+* List of Oneoff Tasks :TASK:ONEOFF:PLATFORM:META:
+** PENDING Organize Script repo :GITHUB:
+Organize ~scripts~ in ~/scipts~ and ~scripts~ in ~$PATH~
+- [ ] Organize ~/scripts~
+- [ ] Oragnize [[file:/home/whammou/notes/capture.org::*Qtile scripts][qtile]] scripts
+- [ ] Oragnize ~$PATH~
+** DONE Github repo updates track :GITHUB:
+CLOSED: [2025-09-06 Sat 20:09]
+- *OBJECTIVE:* Find a way to keep track github repo updates and get notification from updates
+-----
+- *[NOTE]* taken on [2025-09-06 20:08]: \\
+  Keep track of =repo= updates and receive notifications throught emails by subscribing to the target =repo= and enable =email= notifications
+-----
+** ABORTED Github wiki :GITHUB:
+CLOSED: [2025-09-06 Sat 20:09]
+- *OBJECTIVE:* learn to write a github wiki page
+-----
+- *[NOTE]* taken on [2025-09-06 20:09]: \\
+  Wiki is not needed for a =pkm= system as wiki is the way to take notes within a functional repo. That is essentially a =pkm= repo
+-----
+** PENDING Update github profile :GITHUB:
+:PROPERTIES:
+:ID:       2b2eaa80-2103-4ecb-b5d2-4e1f8893d901
+:END:
+- *OBJECTIVE:* /Update my github profile/
+** ABORTED Workaround id link :GITHUB:ORGMODE:
+CLOSED: [2025-09-06 Sat 21:03] DEADLINE: <2025-09-06 Sat>
+- *OBJECTIVE:* Workaround github render does not support for id link like in orgmode
+-----
+- *[NOTE]* taken on [2025-09-06 21:03]: \\
+  There are hardly and workaround with =id-link= that actually work because github is not meant to be a =pkm= hosting site. However one can always manually add file-link to their documents
+-----
+- *Reference:* [[https://old.reddit.com/r/emacs/comments/1fdt3bf/a_quick_hack_to_convert_orgorgroam_links_from_id/][Workaround id link on github orgmode @Reddit]]
+*** PARTIAL Using file_link on Github
+CLOSED: [2025-09-06 Sat 21:10] DEADLINE: <2025-09-06 Sat>
+:PROPERTIES:
+:ID:       143eaa14-d3e0-4743-b745-07358c59476d
+:END:
+- *OBJECTIVE:* Adding aditional file_link in orgmode for interation on Github
+-----
+- *[NOTE]* taken on [2025-09-05 23:42]: \\
+  + *Idea:* Using snippets to poplate an extra link for rendering on github
+    * E.g. [[id:143eaa14-d3e0-4743-b745-07358c59476d][Using file_link on Github @Org]] ([[/system/platform/tasks/oneoff.org][view on Github]])
+  + *Issue:* To generate a =file_link= to a percise location requires s /slug format/ of a =headline= AND its =state= which is not a suitable solution as =state= change dynamically compares to a static nature of a =headline=
+    * Workaround - Disable render of =state= on github combines with =headline-slug= to genrate html friendly link
+    * This works very fine with =docs= but not =tasks=
+-----
+** PENDING Advanced search Github :GITHUB:
+- *OBJECTIVE:* Learn avanced search technique on github
+- *Reference:* [[https://www.freecodecamp.org/news/github-search-tips/][Github advanced search tips @Freecodecamp]]
+** DONE Create issue on nvim-orgmode (vim-regex) :GITHUB:PACKAGES:NVIM:ORGMODE:
+CLOSED: [2025-07-14 Mon 11:07] DEADLINE: <2025-07-14 Mon>
+- *OBJECTIVE:* Create an issue on latex syntax does not load on nvim first launch
+- *Visit:* [[https://github.com/nvim-orgmode/orgmode/issues][Issue nvim-orgmode @Github]]
+** DONE Setup rclone mega :RCLONE:MEGANZ:
+CLOSED: [2025-07-18 Fri 17:17] DEADLINE: <2025-07-18 Fri>
+- *OBJECTIVE:* Setup rclone to sync with mega-nz cloud platfoem
+- *Reference:* [[https://help.mega.io/megas4/setup-guides/rclone-setup-guide-for-mega-s4][Mega-rclone guide @Mega-doc]]
+** DONE Orgmode github footnote :ORGMODE:GITHUB:
+CLOSED: [2025-07-29 Tue 21:45] DEADLINE: <2025-07-29 Tue>
+- *OBJECTIVE:* Reference materials in =footnote= with =orgmode= on =github=
+-----
+- *[NOTE]* taken on <2025-07-29 21:13>:
+  - Orgmode footnote is not support by default on =org-ruby=
+  - To enable this feature add:
+    #+BEGIN_SRC org
+    #+OPTIONS: f:t
+    #+END_SRC
+    - Example: [[https://github.com/wallyqs/org-ruby/blob/master/spec/html_examples/footnotes.org][Org-ruby footnote @Github]]
+      - Footnote with $f(x) = a^2 + bx = c$
+-----
+- *Reference:*
+  - [[https://github.com/kmaasrud/wiki/blob/main/Action.md][Footnote reference example @Github]]
+  - [[https://github.com/github/markup/issues/1094][Github orgmode footnote not properly supported @Github-issue]]
+  - [[https://github.com/wallyqs/org-ruby/issues/2][Org-ruby add footnote support @Github-issue]]
+** DONE Orgmode inline language :ORGMODE:GITHUB:
+CLOSED: [2025-07-29 Tue 22:24] DEADLINE: <2025-07-29 Tue>
+- *OBJECTIVE:* Write inline source code block
+-----
+- *[NOTE]* taken on <2025-07-29 22:22>:
+  - This is a an inline language block src_lua{require("orgmode").setup()}
+  - Github does not seem to support inline language code block
+-----
+- *Reference:* [[https://github.com/nvim-orgmode/orgmode/issues/653][Inline source code block @Github-issue]]
+** PENDING Initialize github.io :GITHUB:PKM:
+- *OBJECTIVE:* Create a functional github.io page for hosting my =PKM=
+- *Reference:* [[https://docs.github.com/en/pages/quickstart#creating-your-website][Create your website @Github-doc]]
+** DONE Testing image render :ORGMODE:ORGZlY:GITHUB:
+CLOSED: [2025-09-06 Sat 20:17]
+- *OBJECTIVE:* Find an image syntax that works on both github and orgzly
+-----
+- *[NOTE]* taken on [2025-09-06 20:17]: \\
+  Syntax that works with /github/ and /orgzly/ is =[[/root/to/file]l]= syntax (root as in the root directory of current repo). To obtain this relative directory (relative directory = =/root/to/file=). Using repo =root-dir= as absolute path
+  + To obtain current file root dir run:
+    #+NAME: Get root dir using git command
+    #+BEGIN_SRC bash
+    git rev-parse --show-toplevel
+    #+END_SRC
+  + Exclude root dir from filepath with =vim.gsub= to obtain a relative dir to target =asset=
+-----
+** PENDING Manage Dotfiles with Gitbare :GIT:GITHUB:
+- *OBJECTIVE:* Mange files using a gitbare repo
+- *Reference:* [[https://www.youtube.com/watch?v=tBoLDpTWVOM#__preview][Git Bare Repository @Youtube-DT]]
+  

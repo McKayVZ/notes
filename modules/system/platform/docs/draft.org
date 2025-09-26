@@ -1,0 +1,28 @@
+#+TITLE: Platform Document Drafts
+
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+FILETAGS: :DOC:DRAFT:PLATFORM:
+#+HTML:<details>
+
+* Document Drafts :DOC:DRAFT:PLATFORM:META:
+#+HTML:</details>
+
+#+NAME:Warning Message
+#+BEGIN_QUOTE
+[!WARNING]
+Draft items are subjected to change and refile!
+#+END_QUOTE
+** OUTLINE Orgmode github hacks :ORGMODE:GITHUB:
+:PROPERTIES:
+:ID: efbdb9d4-436c-4736-b29f-d85d8c4263c7
+:END:
+- A curated list of hacks and tricks when exporting an =org= file or when render on github
+-----
+- *[NOTE]* taken on <2025-07-24 17:35>: \\
+  Orgmode export format or github render is based on a package called =org-ruby=
+-----
+- *Reference:*
+  - [[https://github.com/noncog/github-org-mode-hacks][Orgmode github hacks @Github]]
+  - [[https://github.com/fniessen/refcard-org-mode][Orgmode Reference Card @Github]]

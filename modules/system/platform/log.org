@@ -1,0 +1,41 @@
+#+TITLE: Platform Logs
+#+DESCRIPTION: Description for archive here
+#+OPTIONS: ^:nil
+#+FILETAGS: TEST
+
+* Logs :LOG:PLATFORM:
+- /Store finished tasks/
+** DONE Setting Gdrive scope :GDRIVE:RCLONE:
+CLOSED: [2025-07-17 Thu 08:23] DEADLINE: <2025-07-17 Thu>
+- *OBJECTIVE:* Setting up =gdrive= working scope for =rclone=
+- *Reference:* [[https://rclone.org/drive/#scopes][Google drive scope @Rclone-doc]]
+** DONE Overhaul Note repo [100%] :ORGMODE:GITHUB:
+CLOSED: [2025-05-13 Tue 18:11] DEADLINE: <2025-05-13 Tue 20:00>
+- *Goal(s):* update note repo structure for more optimal workflow
+- *NOTE:* checkout [[./README.org][README]] and find a suitable repo structure
+*** ABORTED Modify README
+CLOSED: [2025-04-11 Fri 21:41]
+- *Goal(s):* modify and add README content
+  - [ ] modify [[./README.org::repo-hierarchy][Hierarchy]]
+  - [ ] add template structure
+*** DONE Separate archive hierarchy
+CLOSED: [2025-05-13 Tue 18:11]
+- Note taken on [2025-01-23 Thu 00:09] \\
+  Separate ~Logs~ ~Lists~ and ~Documents~ to different files to avoid callbacks
+- *Objective:* optimize ~archive~ hierarchy
+** DONE Orgmode social media integrate
+CLOSED: [2025-06-25 Wed 13:03]
+** DONE Test quote block render :ORGMODE:GITHUB:
+CLOSED: [2025-07-26 Sat 18:39]
+- *OBJECTIVE:* Test orgmode quote with github flavor
+  -----
+  - *[NOTE]* taken on <2025-07-26 01:59>:
+    - Orgmode quote block:
+      #+begin_quote
+      This is a test quote block in orgmode
+      #+end_quote
+      #+begin_note
+      This is a test note block in orgmode
+      #+end_note
+    - Github does not support special blocks render for orgmode
+  -----

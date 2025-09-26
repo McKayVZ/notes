@@ -1,0 +1,62 @@
+:PROPERTIES:
+:ID: 815965cc-827d-4816-b30d-904399acbcc1
+:ROAM_ORIGIN: fa715c9f-ba88-4327-9694-fb330e62fb7d
+:END:
+#+TITLE: Youtube API
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:PLATFORM:YOUTUBE:
+#+HTML:<details>
+
+* PARTIAL Youtube API [66%] :DOC:META:PLATFORM:YOUTUBE:
+CLOSED: [2025-06-05 Thu 02:01]
+#+HTML:</details>
+-  *OBJECTIVE:* /Use youtube for documentation:/
+** PENDING Package configurations [50%]
+- *OBJECTIVE:* /Configure packages for smoother experiences/
+*** DONE Youtube downloader - yt-dlp :YTDLP:
+CLOSED: [2025-05-22 Thu 06:28]
+- *OBJECTIVE:* /Increase yt-dlp downlaod speed/
+  - *Configuration:*
+    #+BEGIN_confini
+    --force-ipv4
+    --legacy-server-connect
+    --throttled-rate 500K
+    --concurrent-fragments 8
+    #+END_confini
+- Note taken on [2025-04-22 Tue 18:49] \\
+  yt-dlp download file format in mpv
+  #+BEGIN_SRC confini
+  ytdl-format = 'worstvideo[height>=720]+bestaudio'
+  #+END_SRC
+  - Youtube [[https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file][Cli-youtube-downloader @Github]]
+*** PENDING Subtitle chooser :MPV:
+- /Prioritize sub selection script/
+  - *Visit:* [[https://github.com/CogentRedTester/mpv-sub-select][Mpv-sub-select @Github]]
+** DONE Youtube workflow integration
+:LOGBOOK:
+- Note taken on [2025-04-28 Mon 06:08] \\
+Use ~xdg-utils-handlr~ along side with ~xdg-utils~ for extra features such as _regex-open_
+:END:
+CLOSED: [2025-04-22 Tue 18:49]
+- /Sucessfully open/ ~yt-url~ /in/ ~mpv~ using:
+  - *handlr:* [[id:0a3f8238-97cd-4aa2-a8dc-6ecea163efac][Default-application open method]]
+  - *mpv:* [[id:20071104-5e85-4d24-82a5-cf897074ac96][Integrate mpv youtube link]]
+** DONE Youtube URL parameters
+CLOSED: [2025-04-28 Mon 09:18]
+- *OBJECTIVE:* /Set parameters in/ ~URL~ to create video snippets:
+  - *Materials:*
+    - [[https://developers.google.com/youtube/player_parameters?csw=1#Parameters][Player-parameters @Youtube-doc]]
+    - [[https://l.opnxng.com/r/youtube/comments/2eu12t/modify_youtube_url_for_specific_start_and_stop/][youtube specify start AND stop time @Reddit]]
+    - [[https://a.opnxng.com/exchange/stackoverflow.com/questions/68169842/is-there-a-comment-character-for-urls][Comments in url @Overflow]]
+  - *Examples:*
+    - [x] [[https://www.youtube.com/embed/WAm_S3K_zjg?start=01&end=51][with ~embed~ attr]]
+    - [x] [[https://www.youtube.com/watch?v=rP5V2CkHJfo#__preview][with comment]]
+    - [x] [[https://www.youtube.com/embed/WAm_S3K_zjg?start=01&end=51#__preview][With ~embed~ and ~comment~ ]]
+*** DONE Mark URL as preview
+CLOSED: [2025-06-05 Thu 02:00]
+- *OBJECTIVE:* /Specify normal url or preview url/
+  - *Visit:* [[id:20071104-5e85-4d24-82a5-cf897074ac96][Integrate mpv youtube link @Orgmode]]
+- *Reference:* [[https://docs.mapp.com/v1/docs/url-encoding-and-what-characters-are-valid-in-a-uri][URL comment character @Search]]

@@ -1,0 +1,74 @@
+:PROPERTIES:
+:ID: 05a24a12-d82e-476d-a8ab-bb6e9c688b41
+:ROAM_ORIGIN: 24ba5149-6f83-4106-a733-25a4b998c713
+:END:
+#+TITLE: Github Render Tests
+
+#+OPTIONS: title:nil tags:nil todo:nil ^:nil f:t num:t pri:nil toc:t
+#+LATEX_HEADER: \renewcommand\maketitle{} \usepackage[scaled]{helvet} \renewcommand\familydefault{\sfdefault}
+#+TODO: TODO(t) (e) DOING(d) PENDING(p) OUTLINE(o) RESEARCH(s) FEEDBACK(b) WAITING(w) NEXT(n) | IDEA(i) ABORTED(a) PARTIAL(r) REVIEW(v) DONE(f)
+#+FILETAGS: :DOC:PROJECT:SYSTEM:GITHUB:ORGMODE:PLATFORM:
+#+HTML:<details>
+
+* DONE Github Render Tests [100%] :DOC:META:SYSTEM:GITHUB:ORGMODE:PLATFORM:
+CLOSED: [2025-06-19 Thu 20:52]
+#+HTML:</details>
+:PROPERTIES:
+:ID:       7fd3eabc-0cd2-43bb-b3b3-a31c018163b2
+:END:
+- *OBJECTIVE:* Testing github render for orgmode
+** PARTIAL Testing math render :LATEX:
+CLOSED: [2025-06-19 Thu 02:07]
+- *OBJECTIVE:* Testing markup and math render on github
+  - This is inline math block: $\omega_{av} = \frac{\theta_f - \theta_i}{t_f - t_i} = \frac{\Delta \theta}{\Delta t}$
+  #+html: <div align='center'>$$\omega_av = \frac{\theta_f - \theta_i}{t_f - t_i} = \frac{\Delta \theta}{\Delta t}$$</div>
+  - This is inline math block: $\omega^2 = \omega^2_i + 2 \alpha \Delta \theta$
+  $$ \omega^2 = \omega^2_i + 2 \alpha \Delta \theta $$
+  - This is inline math block: $\omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t}$
+  $$\omega = \lim_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t}$$
+  $$m_1 v_{1ix} + m_2 v_{2ix} = m_1 v_{1 \mathord{\mathit{f}} x} + m_2 v_{2 \mathord{\mathit{f}} x}$$
+  
+- *Complication:* Render orgmode mathmode error
+  - [[https://ao.bloat.cat/exchange/tex.stackexchange.com/questions/74969/how-to-make-the-limit-mathematics-sign][latex display mode @Overflow]]
+- *Reference:* [[https://ao.bloat.cat/exchange/stackoverflow.com/questions/31534084/how-can-i-get-github-to-display-inline-math-in-readme-org-file#79302884][State of orgmode in github @Overflow]]
+** DONE Testing html render :HTML:
+CLOSED: [2025-06-15 Sun 21:32] DEADLINE: <2025-06-15 Sun>
+- [X] *OBJECTIVE:* Testing html render with math on github render [3/3]
+  - [X] Center images
+  - [X] Math block html nest
+  - [X] Hide iamges
+#+begin_html html
+<p align="center">
+<IMG src="./design/EEET2603/assets/LAB_03/LAB_3_1.svg" alt="test image" width=50%/>
+</p>
+#+end_html
+#+begin_html html
+<details>
+<summary>Example</summary>
+<p align="center">
+$$\omega = \lim^2_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t}$$
+</p>
+</details>
+#+end_html
+#+begin_html html
+<details>
+<summary>Example</summary>
+<IMG src="./design/EEET2603/assets/LAB_03/LAB_1_2.svg" alt="test image" width=50%/>
+</details>
+#+end_html
+#+BEGIN_SRC html
+<details>
+<summary>Example</summary>
+<p align="center">
+$$\omega = \lim^2_{\Delta t \to 0} \frac{\Delta \theta}{\Delta t}$$
+</p>
+</details>
+#+END_SRC
+- *Reference:*
+  - [[id:6440266f-57df-40e2-a9e2-8d0867fcf9f2][Working with html @Orgmode]]
+  - [[id:8506cc5d-a3e8-4d18-94aa-87ceb7a8c932][Treesitter highlight @Orgmode]]
+** DONE Relative links
+CLOSED: [2025-06-19 Thu 20:52]
+- *OBJECTIVE:* Determine how to link between notes on github page
+- *Complication:* Relative links (links with id:) do not work on github render
+  - [[https://github.com/novoid/github-orgmode-tests][Github orgmode test @Github]]
